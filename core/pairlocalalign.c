@@ -1202,7 +1202,7 @@ static void calllara( int nseq, char **mseq, char *laraarg )
 
 
 //	fprintf( stderr, "calling LaRA\n" );
-	sprintf( com, "env PATH=%s:/bin:/usr/bin mafft_lara -i _larain -w _laraout -o _lara.params %s", whereispairalign, laraarg );
+	sprintf( com, "env PATH=%s:/bin:/usr/bin mafft_lara -i _larain -w _laraout -o pairs %s", whereispairalign, laraarg );
 	res = system( com );
 	if( res )
 	{

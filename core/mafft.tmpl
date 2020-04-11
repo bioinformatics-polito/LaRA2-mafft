@@ -1564,24 +1564,11 @@ function removetmpfile() { # for MPI
 	if [ $distance = "lara" -o $distance = "slara" ]; then
 		if [ ! -x "$prefix/mafft_lara" ]; then
 			echo ""       1>&2
-			echo "== Install LaRA =========================================================" 1>&2
-			echo "This option requires LaRA (Bauer et al. http://www.planet-lisa.net/)."     1>&2
-			echo "The executable have to be renamed to 'mafft_lara' and installed into "     1>&2
-			echo "the $prefix directory. "                                                   1>&2
-			echo "A configuration file of LaRA also have to be given"                        1>&2
-			echo "mafft-xinsi --larapair --laraparams parameter_file"                        1>&2
-			echo "mafft-xinsi --slarapair --laraparams parameter_file"                       1>&2
-			echo "=========================================================================" 1>&2
-			echo "" 1>&2
-			exit 1
-		fi
-		if [ ! -s "$laraparams" ]; then
-			echo ""       1>&2
-			echo "== Configure LaRA =======================================================" 1>&2
-			echo "A configuration file of LaRA have to be given"                             1>&2
-			echo "mafft-xinsi --larapair --laraparams parameter_file"                        1>&2
-			echo "mafft-xinsi --slarapair --laraparams parameter_file"                       1>&2
-			echo "=========================================================================" 1>&2
+			echo "== Install LaRA2 =================================================================" 1>&2
+			echo "This option requires LaRA2 (Winkler, Urgese et al. https://github.com/seqan/lara)." 1>&2
+			echo "The executable have to be renamed to 'mafft_lara' and installed into "              1>&2
+			echo "the $prefix directory. "                                                            1>&2
+			echo "==================================================================================" 1>&2
 			echo "" 1>&2
 			exit 1
 		fi
